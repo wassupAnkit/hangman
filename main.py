@@ -33,5 +33,22 @@ if __name__ == 'main':
             except:
                 print('Enter only letter')
                 continue
+            if not guess.isalpha():
+                print('Enter  only a letter')
+                continue
+            elif len(guess) > 1:
+                print ('Enter only single letter')
+                continue
+            elif guess in letterGuessed:
+                print('You have already guessed this letter, try something else')
+                continue
+
+            if guess in word:
+                k = word.count(guess)
+                for _ in range(k):
+                    letterGuessed += guess
+                print('Good going, few more to go')
+                continue
+            
     except:
         print()
