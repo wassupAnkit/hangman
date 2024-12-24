@@ -23,11 +23,15 @@ if __name__ == 'main':
     correct = 0
     flag = 0 
     try:
-        while(chances)
+        while(chances != 0) and flag == 0:
+            print()
+            chances -=1
 
-
-
-if isAlpha:
-    print("good")
-else:
-    print("bad")
+            try:
+                guess = str(input('Enter a letter to guess: '))
+            
+            except:
+                print('Enter only letter')
+                continue
+    except:
+        print()
