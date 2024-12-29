@@ -17,9 +17,9 @@ if __name__ == '__main__':
         j = random.choice(range(len(word)+2)) 
         if j < len(word):
             letter[j] = '_'
-        #print('_', end=' ')
-    #print(letter, end='')
-    print(' '.join(letter), end=' ')
+        new_word = ' '.join(letter)
+
+    print(new_word, end=' ')
 
     playing = True
     # List for storing the letters guessed by the player
@@ -49,6 +49,11 @@ if __name__ == '__main__':
                print('You have already guessed that letter')
                continue
  
+           #If the shown letter is entered
+           if guess in new_word:
+              print('You entered the word that is shown')
+
+
            # If letter is guessed correctly
            if guess in word:
                # k stores the number of times the guessed letter occurs in the word
@@ -70,7 +75,7 @@ if __name__ == '__main__':
                    flag = 1
                    print('Congratulations, You won!')
                    break  # To break out of the for loop
-                   break  # To break out of the while loop
+                   #break  # To break out of the while loop
                else:
                    print('_', end=' ')
  
