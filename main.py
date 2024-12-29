@@ -28,7 +28,7 @@ if __name__ == '__main__':
     correct = 0
     flag = 0
     try:
-        while (chances != 0) and flag == 0:  # Flag is updated when the word is correctly guessed
+        while (chances != 0) and flag == 0:  #Flag is updated when the word is correctly guessed
            print()
            chances -= 1
  
@@ -40,7 +40,7 @@ if __name__ == '__main__':
  
            # Validation of the guess
            if not guess.isalpha():
-               print('Enter only a LETTER')
+               print('Enter letters not number')
                continue
            elif len(guess) > 1:
                print('Enter only a SINGLE letter')
